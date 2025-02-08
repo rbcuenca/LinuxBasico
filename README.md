@@ -1,4 +1,4 @@
-#Atividade: Introdução ao Linux Ubuntu
+# Atividade: Introdução ao Linux Ubuntu
 
 ## **Proposta de Curso: Introdução ao Linux Ubuntu**
 
