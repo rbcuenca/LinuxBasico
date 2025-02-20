@@ -3,8 +3,9 @@
 ## **Atividade Complementar: Introdução ao Linux Ubuntu**
 
 ### **Público-Alvo**
-Este curso é destinado a alunos com familiaridade no uso de computadores que desejam explorar o universo do sistema operacional Linux, com foco na distribuição Ubuntu. É especialmente recomendado para estudantes das áreas de Engenharia e Tecnologia.
+Esta atividade é destinada a alunos com familiaridade no uso de computadores que desejam explorar o universo do sistema operacional Linux, com foco na distribuição Ubuntu. É especialmente recomendado para estudantes das áreas de Engenharia e Tecnologia.
 
+---
 ---
 
 ### **Requisitos Técnicos**
@@ -32,13 +33,15 @@ Para acompanhar as aulas, os alunos deverão atender aos seguintes requisitos m�
 - Imagem ISO do Ubuntu 22.04.x: https://releases.ubuntu.com/jammy/ubuntu-22.04.5-desktop-amd64.iso
 - Rufus (para criar o pendrive bootavel): https://github.com/pbatard/rufus/releases/download/v4.6/rufus-4.6p.exe
 
+
+---
 ---
 
 ### **Objetivo Geral**
 A atividade tem como objetivo oferecer aos alunos uma introdução prática ao sistema operacional Linux, capacitando-os a realizar a instalação, configuração e personalização do ambiente, além de preparar o sistema para atividades relacionadas à programação e uso pessoal.
 
 ---
-
+---
 ### **Competências Adquiridas**
 Ao final da atividade, os alunos serão capazes de:
 - Instalar o Linux Ubuntu em uma máquina virtual ou diretamente em um computador;
@@ -59,9 +62,10 @@ Os objetivos específicos da atividade incluem:
    - Oh-My-Bash, para personalização avançada do terminal.
 
 ---
+---
 
 ### **Estrutura das Aulas**
-O curso será realizado em três encontros, cada um com duração de 2 horas. A divisão dos conteúdos é apresentada a seguir:
+A atividade será realizada em dois encontros, cada um com duração de 2 horas. A divisão dos conteúdos é apresentada a seguir:
 
 #### **Dia 1: Instalação do Sistema**
 - Configuração da máquina virtual / Preparação do Pendrive de boot
@@ -80,20 +84,9 @@ O curso será realizado em três encontros, cada um com duração de 2 horas. A 
   - Oh-My-Bash (com suporte a ferramentas como `wget` ou `curl`);
   - Fontes adicionais para personalização avançada do terminal.
 
-#### **Dia 3: Controle de Versão com Git e GitHub**
-- Instalação e configuração do Git (utilizando o gerenciador APT).
-- Configuração inicial do Git no terminal.
-- Criação de uma chave SSH para autenticação no GitHub.
-- Introdução aos comandos básicos do Git:
-  - `git clone`;
-  - `git pull`;
-  - `git add`;
-  - `git commit`;
-  - `git push`;
-  - `git stash`.
-
+---
 ---
 
-Com esta estrutura, o curso proporcionará aos alunos uma base sólida no uso do Linux Ubuntu, preparando-os tanto para atividades acadêmicas quanto profissionais que exigem domínio desse sistema operacional amplamente utilizado no mercado.
+Com esta estrutura, a atividade proporcionará aos alunos uma base sólida no uso do Linux Ubuntu, preparando-os tanto para atividades acadêmicas quanto profissionais que exigem domínio desse sistema operacional amplamente utilizado no mercado.
 
 
