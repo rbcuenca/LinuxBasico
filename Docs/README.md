@@ -36,6 +36,18 @@ Para acompanhar as aulas, os alunos deverão atender aos seguintes requisitos m�
 
 ---
 ---
+### Atividade 
+- Fez os downloads propostos acima?
+- Organizou estes arquivos para fácil localização?
+- Já escolheu se usará uma Máquina Virtual ou se fará o "Dual boot" em seu computador?
+
+Se você escolheu instalar em Máquina Virtual, vá para a [Instalação do VirtualBox](VirtualBox.md)
+
+Se você escolheu fazer o "Dual boot", vá para [Fazer "Dual boot"](Dualboot.md)
+
+
+---
+---
 
 ### **Objetivo Geral**
 A atividade tem como objetivo oferecer aos alunos uma introdução prática ao sistema operacional Linux, capacitando-os a realizar a instalação, configuração e personalização do ambiente, além de preparar o sistema para atividades relacionadas à programação e uso pessoal.
