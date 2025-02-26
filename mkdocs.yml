@@ -1,0 +1,32 @@
+INHERIT: active-handout.yml
+
+site_name: Universo Linux
+
+extra:
+  custom_variables:
+    repo_aps: https://github.com/insper/universo-linux
+    repo_aps_git: https://github.com/insper/universo-linux.git
+
+extra_javascript:
+  - js/tabs.js
+  - js/termynal.js
+  - js/custom.js
+
+extra_css:
+    - css/termynal.css
+
+nav:
+  - 'Home': index.md
+  - "01 - Introdução": modules/01-intro/intro.md
+  - '02 - Instalação SSH': modules/02-install/install_ssh.md
+  - '03 - Conexão SSH': modules/03-connection/ssh_aws.md
+  - '04 - Arquivos e Pastas': modules/04-folders/files_folders.md
+  - '05 - Tree - Árvore de diretórios': modules/05-tree/tree.md
+  - '06 - Exercícios': modules/06-exercises/exercises.md
+  - '07 - Servidor Web': modules/07-web-server/nginx.md
+    # - "03 - Batch prediction":
+    #   - "Part 1":
+    #     - modules/03-batch/intro.md
+    #   - "Part 2":
+    #     - modules/03-batch/sql.md
+    #     - modules/03-batch/db_tool.md
