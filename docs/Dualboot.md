@@ -66,3 +66,9 @@ Com o Secure Boot desativado e o disco descriptografado, você estará pronto pa
 💡 <strong>Dica:</strong> - Lembre-se de que as telas e nomes podem variar de acordo com a atualização e versão do seu windows.
 </div>
 
+Agora vamos iniciar o computador pelo pendrive. Para esta etapa, se for um notebook da <strong>DELL</strong> pressione repetidamente a tecla <strong>F12</strong> após ligar o computador, assim acessará o menu de boot do computador. Se for um computador de outra marca, é necessário saber como entrar no menu, mas é provavel que seja com <strong>F8 ou F10</strong> e se for um computador <strong>Thinkpad</strong> você deve precionar <strong>ENTER</strong> durante a inicialização quando ele mandar.
+
+Após aparecer o menu, escolha o pendrive e tecle enter.
+
+Próximo passo: [Instalação do Ubuntu](Ubuntu.md)
+

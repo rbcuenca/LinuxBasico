@@ -52,7 +52,7 @@
 <img title="Instalação" width="640"  src="Pictures/MacOS/instMac02.png">
 <img title="Instalação" width="640"  src="Pictures/MacOS/instMac03.png">
 <p style="text-align:center;">Nos últimos momentos da instalação, aparecerá este aviso no canto superior direito, basta fechar.</p>
-<img title="Instalação" width="320" height="120" src="Pictures/MacOS/instMac05.png">
+<img title="Instalação" width="320" height="120" src="Pictures/MacOS/instMac05.png"><br>
 <img title="Instalação" width="640"  src="Pictures/MacOS/instMac04.png">
 
 </center>
