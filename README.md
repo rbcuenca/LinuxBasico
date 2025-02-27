@@ -1,2 +1,2 @@
-# universo-linux
-Universo Linux
+# Linux Basico
+Linux Basico

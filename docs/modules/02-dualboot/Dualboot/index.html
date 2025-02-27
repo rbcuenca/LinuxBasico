@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+      
+        <title>02 - Dual Boot - Linux Basico</title>
+      
+    
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:700|Oxygen+Mono|Source+Sans+Pro:700|Source+Serif+Pro&amp;display=swap">
+    <link rel="stylesheet" href="../../../assets/css/main.css">
+    <script>
+      // SETUP GLOBAL CONSTANTS
+      var base_url = '../../..';
+      
+      var telemetryEnabled = false;
+      var backendUrl = "";
+      var courseSlug = "";
+      
+      
+      var dashboardEnabled = true;
+      var tagTree = [{'reference': ['choice-exercise', 'parsons-exercise', 'text-exercise']}, {'grandparent-tag': [{'parent-tag': ['child-tag']}]}];
+      
+
+      // SETUP PLUGIN
+      window.initialized = false;
+      if (!window.initializers) window.initializers = [];
+      window.registerInitializer = (initialize) => {
+        if (window.initialized) initialize();
+        else window.initializers.push(initialize);
+      };
+    </script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="https://unpkg.com/hyperscript.org"></script>
+    <script src="https://unpkg.com/htmx.org@1.8.4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script src="../../../assets/js/main.js"></script>
+    
+    <link rel="stylesheet" href="../../../css/termynal.css"><link rel="stylesheet" href="../../../termynal.css">
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  <body>
+    <div class="ah-main-container">
+      <header class="ah-header">
+        <button class="ah-menu-btn ah-button ah-button--borderless"
+                aria-label="toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+</svg>
+        </button>
+        <a href="../../.."
+           title="Linux Basico"
+           class="ah-logo"
+           aria-label="Linux Basico">
+          Linux Basico
+        </a>
+        <div class="ah-header--right">
+          
+          
+          
+          <button id="resetHandoutButton">
+            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+  <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+</svg></span>
+          </button>
+          
+
+          
+        </div>
+      </header>
+      <nav class="ah-navigation preload">
+        <div class="ah-nav-container">
+          <button class="ah-menu-btn ah-button ah-button--borderless close-menu"
+                  aria-label="close menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/>
+</svg>
+          </button>
+          <ul class="ah-nav-body">
+            
+              
+  
+    <li>
+      <a href="../../..">Home</a>
+    </li>
+  
+
+            
+              
+  <li class="ah-togglable-item opened">
+    <span class="ah-togglable-handle">Dia 1</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../01-virtualbox/VirtualBox/">01 - VirtualBox</a>
+    </li>
+  
+
+      
+        
+  
+
+    <li class="active ah-togglable-item opened">
+      <span class="ah-togglable-handle">02 - Dual Boot</span>
+      <ul>
+        
+          
+            
+            
+        
+      </ul>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../03-ubuntu/Ubuntu/">03 - Instalando o Ubuntu</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Dia 2</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../04-bla/bla.md">04 - bla</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+          </ul>
+        </div>
+      </nav>
+      <main class="ah-content ah-typeset">
+        
+          <div class="ah-title-box">
+            <ul class="ah-breadcrumbs">
+              
+                
+                  
+                    <li>Dia 1</li>
+                  
+                
+                <li></li>
+            </ul>
+            
+            
+          </div>
+          
+            <section class="progress-section show">
+<p><a href="README.md">Retornar</a></p>
+<h1 id="fazer-o-dual-boot">Fazer o Dual Boot</h1>
+<p>Ao escolher esta opção é <strong>fortemente recomendável</strong> que tenha feito uma cópia de segurança de tudo o que você não pode perder. Há uma possiblidade grande de perder dados.</p>
+<div style="border: 1px solidrgb(19, 20, 20); border-left-width: 5px; padding: 10px; background-color:rgb(175, 178, 181); border-radius: 5px;">
+💡 <strong>Dica:</strong> Você tem o OneDrive pela sua conta Microsoft do INSPER (e-mail do aluno).<br><br>Se você usa Windows, a intergração com o OneDrive fuciona muito bem e mantém, automaticamente, uma cópia on-line dos seus arquivos e de suas configurações básicas (dependendo de como configurou).<br><br>Se você usa MacOS (A partir do Yosemite - 10.10 - 2014) a integração com o iCloud Drive funciona muito bem e mantém, automaticamente, uma cópia on-line
+</div>
+<p><br><br>
+Antes de iniciar a instalação do Linux em dual boot, é necessário verificar se a criptografia de disco está ativada. Caso esteja, será preciso desativá-la para posteriormente desligar o Secure Boot na BIOS. Siga os passos abaixo para verificar e desativar a criptografia de disco no Windows:</p>
+<div class="language-text highlight"><pre><span></span><code>1.      Clique no botão Iniciar,
+2.  Acesse o Painel de Controle.
+3.  Vá até Sistema e Segurança.
+4.  Clique em Criptografia de Unidade de Disco BitLocker.
+</code></pre></div>
+<p>Na tela que aparecer, você poderá verificar se o BitLocker está ativado. Caso esteja, siga as instruções para desativá-lo:
+<center><a class="glightbox" href="Pictures/bitlocker/bitlocker.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img title="Instalação" width="640" src="Pictures/bitlocker/bitlocker.png"></a></center>
+<br></p>
+<div class="language-text highlight"><pre><span></span><code>•   Clique em Desativar BitLocker ao lado da unidade criptografada.
+•   Aguarde a descriptografia completa do disco antes de prosseguir.
+</code></pre></div>
+<p><br>
+Agora precisamos criar o pendrive de instalação do Ubuntu 22.04. Para este passo, você deve instalar o <strong>rufus</strong>. <br><br></p>
+<p>Você já baixou este arquivo no mesmo momento em que baixou o arquivo <strong>iso</strong> no início da atividade:<a href="README.md">Linux Basico</a></p>
+<p>Após executar o arquivo, você verá um pedido de autorização de execução do windows:
+<center><a class="glightbox" href="Pictures/rufus/inst_rufus01.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img title="Instalação" width="640" src="Pictures/rufus/inst_rufus01.png"></a></center>
+<br>
+Clique em <strong>SIM</strong> e abrirá uma janela perguntando se quer buscar por atualizações:
+<br><br>
+<center><a class="glightbox" href="Pictures/rufus/inst_rufus02.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img title="Instalação" width="640" src="Pictures/rufus/inst_rufus02.png"></a></center>
+<br>
+Clique em <strong>SIM</strong> novamente. Após verificar se existem atualizações, ele abrirá a tela principal do rufus:
+<center><a class="glightbox" href="Pictures/rufus/rufus.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img title="Instalação" width="640" src="Pictures/rufus/rufus.png"></a></center>
+<br>
+Nesta tela, você deve escolher as seguintes opções:<br>
+- Device: O Pendrive em que gravará a instalação do Ubuntu;<br>
+- Botão <strong>SELECT</strong>: Selecionar o arquivo .iso do Ubuntu que você baixou;<br>
+- Partition Scheme: <strong>GPT</strong>;<br>
+- Target System: <strong>UEFI</strong>.<br>
+<br>
+As demais opções, mantenha como padrão.
+<br><br></p>
+<p>Agora clique em <strong>START (INICIAR)</strong>.</p>
+<p>Após terminar, clique em <strong>close</strong> e desligue o computador <strong>com o pendrive conectado</strong>. Você deve reiniciar e entrar na BIOS para os próximos ajustes.
+<br></p>
+<div style="border: 1px solidrgb(19, 20, 20); border-left-width: 5px; padding: 10px; background-color:rgb(175, 178, 181); border-radius: 5px;">
+💡 <strong>Dica:</strong> A próxima etapa (BIOS) faremos juntos para que não tenhamos problemas. Cada fabricante tem uma bios própria e veremos caso a caso.
+</div>
+<p><br>
+Após desativar a criptografia, reinicie o computador e acesse as configurações da BIOS/UEFI para desabilitar o Secure Boot. O procedimento pode variar conforme o fabricante, mas geralmente envolve:</p>
+<div class="language-text highlight"><pre><span></span><code>1.  Reiniciar o computador enquanto mantém pressionada a tecla específica para acessar a BIOS (geralmente F2, DEL ou ESC).
+2.  Navegar até a aba de segurança ou inicialização (Security ou Boot).
+3.  Localizar a opção Secure Boot e defini-la como Disabled.
+4.  Salvar as alterações e sair da BIOS.
+</code></pre></div>
+<p>Com o Secure Boot desativado e o disco descriptografado, você estará pronto para iniciar a instalação do Linux em dual boot.
+<br><br></p>
+<div style="border: 1px solidrgb(19, 20, 20); border-left-width: 5px; padding: 10px; background-color:rgb(175, 178, 181); border-radius: 5px;">
+💡 <strong>Dica:</strong> - Lembre-se de que as telas e nomes podem variar de acordo com a atualização e versão do seu windows.
+</div>
+
+<p>Agora vamos iniciar o computador pelo pendrive. Para esta etapa, se for um notebook da <strong>DELL</strong> pressione repetidamente a tecla <strong>F12</strong> após ligar o computador, assim acessará o menu de boot do computador. Se for um computador de outra marca, é necessário saber como entrar no menu, mas é provavel que seja com <strong>F8 ou F10</strong> e se for um computador <strong>Thinkpad</strong> você deve precionar <strong>ENTER</strong> durante a inicialização quando ele mandar.</p>
+<p>Após aparecer o menu, escolha o pendrive e tecle enter.</p>
+<p>Próximo passo: <a href="Ubuntu.md">Instalação do Ubuntu</a></p>
+
+
+</section>
+          
+        
+      </main>
+      <footer class="ah-footer ah-typeset">
+        <div class="ah-footer-nav">
+          
+            <a href="../../01-virtualbox/VirtualBox/"
+               class="ah-prev"
+               title="01 - VirtualBox">
+              <span class="nav-label">Anterior</span>
+              <span class="nav-title">01 - VirtualBox</span>
+            </a>
+          
+          
+            <a href="../../03-ubuntu/Ubuntu/"
+               class="ah-next"
+               title="03 - Instalando o Ubuntu">
+              <span class="nav-label">Próximo</span>
+              <span class="nav-title">03 - Instalando o Ubuntu</span>
+            </a>
+          
+        </div>
+      </footer>
+    </div>
+    
+      <script src="../../../js/tabs.js"></script><script src="../../../js/termynal.js"></script><script src="../../../js/custom.js"></script><script src="../../../termynal.js"></script>
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body>
+</html>

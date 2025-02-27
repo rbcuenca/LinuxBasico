@@ -1,11 +1,11 @@
 INHERIT: active-handout.yml
 
-site_name: Universo Linux
+site_name: Linux Basico
 
 extra:
   custom_variables:
-    repo_aps: https://github.com/insper/universo-linux
-    repo_aps_git: https://github.com/insper/universo-linux.git
+    repo_aps: https://github.com/rbcuenca/LinuxBasico
+    repo_aps_git: https://github.com/rbcuenca/LinuxBasico.git
 
 extra_javascript:
   - js/tabs.js
@@ -17,13 +17,12 @@ extra_css:
 
 nav:
   - 'Home': index.md
-  - "01 - Introdução": modules/01-intro/intro.md
-  - '02 - Instalação SSH': modules/02-install/install_ssh.md
-  - '03 - Conexão SSH': modules/03-connection/ssh_aws.md
-  - '04 - Arquivos e Pastas': modules/04-folders/files_folders.md
-  - '05 - Tree - Árvore de diretórios': modules/05-tree/tree.md
-  - '06 - Exercícios': modules/06-exercises/exercises.md
-  - '07 - Servidor Web': modules/07-web-server/nginx.md
+  - "Dia 1":
+    - "01 - VirtualBox": modules/01-virtualbox/VirtualBox.md
+    - '02 - Dual Boot': modules/02-dualboot/Dualboot.md
+    - '03 - Instalando o Ubuntu': modules/03-ubuntu/Ubuntu.md
+  - "Dia 2":
+    - "04 - bla": modules/04-bla/bla.md
     # - "03 - Batch prediction":
     #   - "Part 1":
     #     - modules/03-batch/intro.md
