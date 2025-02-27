@@ -95,3 +95,5 @@
 <p style="text-align:center;">Sumário<p>
 <p style="text-align:center;">Nesta tela você poderá revisar tudo o que escolheu e finalizar a configuração da sua máquina virtual, clicando em Finalizar.<p><br>
 <p style="text-align:center;">Os próximos passos serão os mesmos para as máquinas virtuais e a instalação diretamente no computador.<p>
+
+Próximo passo: [Instalação do Ubuntu](Ubuntu.md)

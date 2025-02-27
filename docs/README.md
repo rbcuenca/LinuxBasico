@@ -27,11 +27,15 @@ Para acompanhar as aulas, os alunos deverão atender aos seguintes requisitos m�
 - __Trazer__ Pen drive com capacidade mínima de 8 GB para a instalação do Linux.
 
 #### **Arquivos Necessários**
-- VirtualBox para [Windows:](https://download.virtualbox.org/virtualbox/7.1.6/VirtualBox-7.1.6-167084-Win.exe)https://download.virtualbox.org/virtualbox/7.1.6/VirtualBox-7.1.6-167084-Win.exe
-- VirtualBox para [MacOS:](https://download.virtualbox.org/virtualbox/7.1.6/VirtualBox-7.1.6-167084-OSX.dmg)https://download.virtualbox.org/virtualbox/7.1.6/VirtualBox-7.1.6-167084-Win.exe
+- VirtualBox para [Windows:](https://download.virtualbox.org/virtualbox/7.1.6/VirtualBox-7.1.6-167084-Win.exe)
+https://download.virtualbox.org/virtualbox/7.1.6/VirtualBox-7.1.6-167084-Win.exe
+- VirtualBox para [MacOS:](https://download.virtualbox.org/virtualbox/7.1.6/VirtualBox-7.1.6-167084-OSX.dmg)
+https://download.virtualbox.org/virtualbox/7.1.6/VirtualBox-7.1.6-167084-Win.exe
 **Há uma vesão do VirtualBox para o MacOS Apple Silicon, mas só é possível usar o ubuntu arm que não é totalmente compatível com o que faremos.
-- Imagem ISO do [Ubuntu 22.04.x:](https://releases.ubuntu.com/jammy/ubuntu-22.04.5-desktop-amd64.iso)https://releases.ubuntu.com/jammy/ubuntu-22.04.5-desktop-amd64.iso
-- Rufus [para criar o pendrive bootavel:](https://github.com/pbatard/rufus/releases/download/v4.6/rufus-4.6p.exe)https://github.com/pbatard/rufus/releases/download/v4.6/rufus-4.6p.exe
+- Imagem ISO do [Ubuntu 22.04.x:](https://releases.ubuntu.com/jammy/ubuntu-22.04.5-desktop-amd64.iso)
+https://releases.ubuntu.com/jammy/ubuntu-22.04.5-desktop-amd64.iso
+- Rufus [para criar o pendrive bootavel:](https://github.com/pbatard/rufus/releases/download/v4.6/rufus-4.6p.exe)
+https://github.com/pbatard/rufus/releases/download/v4.6/rufus-4.6p.exe
 
 
 ---
