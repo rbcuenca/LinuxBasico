@@ -13,7 +13,7 @@
   <a href="#instalação-no-macos">MACOS</a>
 </p>
 
-<div style="border: 1px solidrgb(19, 20, 20); border-left-width: 5px; padding: 10px; background-color:rgb(80, 84, 87); border-radius: 5px;">
+<div style="border: 1px solidrgb(19, 20, 20); border-left-width: 5px; padding: 10px; background-color:rgb(175, 178, 181); border-radius: 5px;">
 💡 <strong>Dica:</strong> Pergunte em TODAS dúvidas!!!
 </div>
 
