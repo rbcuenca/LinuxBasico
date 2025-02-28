@@ -22,17 +22,13 @@ Para acompanhar as aulas, os alunos deverão atender aos seguintes requisitos m�
 - Um segundo disco rígido disponível com pelo menos 80 GB de espaço livre;
 - Backup prévio dos arquivos pessoais (__há risco de perda de dados durante o processo__);
 - __Trazer__ Pen drive com capacidade mínima de 8 GB para a instalação do Linux.
-
+[](){ #arquivos }
 #### **Arquivos Necessários**
 - VirtualBox para [Windows:](https://download.virtualbox.org/virtualbox/7.1.6/VirtualBox-7.1.6-167084-Win.exe)
-https://download.virtualbox.org/virtualbox/7.1.6/VirtualBox-7.1.6-167084-Win.exe
 - VirtualBox para [MacOS:](https://download.virtualbox.org/virtualbox/7.1.6/VirtualBox-7.1.6-167084-OSX.dmg)
-https://download.virtualbox.org/virtualbox/7.1.6/VirtualBox-7.1.6-167084-Win.exe
 **Há uma vesão do VirtualBox para o MacOS Apple Silicon, mas só é possível usar o ubuntu arm que não é totalmente compatível com o que faremos.
 - Imagem ISO do [Ubuntu 22.04.x:](https://releases.ubuntu.com/jammy/ubuntu-22.04.5-desktop-amd64.iso)
-https://releases.ubuntu.com/jammy/ubuntu-22.04.5-desktop-amd64.iso
 - Rufus [para criar o pendrive bootavel:](https://github.com/pbatard/rufus/releases/download/v4.6/rufus-4.6p.exe)
-https://github.com/pbatard/rufus/releases/download/v4.6/rufus-4.6p.exe
 
 ### Atividade 
 - Fez os downloads propostos acima?
@@ -80,7 +76,7 @@ A atividade será realizada em dois encontros, cada um com duração de 2 horas.
   - Google Chrome (utilizando o gerenciador DPKG);
   - Visual Studio Code (utilizando o gerenciador DPKG);
   - Terminator (utilizando o gerenciador APT);
-  - Oh-My-Bash (com suporte a ferramentas como `wget` ou `curl`);
+  - Oh-My-Bash (com suporte a ferramentas como [`wget`](https://www.gnu.org/software/wget/) ou [`curl`](https://curl.se/));
   - Fontes adicionais para personalização avançada do terminal.
 
 Com esta estrutura, a atividade proporcionará aos alunos uma base sólida no uso do Linux Ubuntu, preparando-os tanto para atividades acadêmicas quanto profissionais que exigem domínio desse sistema operacional amplamente utilizado no mercado.

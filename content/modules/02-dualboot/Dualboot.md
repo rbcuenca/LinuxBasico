@@ -1,4 +1,4 @@
-[Retornar](README.md)
+[Retornar](index.md)
 # Fazer o Dual Boot
 
 
@@ -15,7 +15,7 @@ Antes de iniciar a instalação do Linux em dual boot, é necessário verificar 
 	3.	Vá até Sistema e Segurança.
 	4.	Clique em Criptografia de Unidade de Disco BitLocker.
 Na tela que aparecer, você poderá verificar se o BitLocker está ativado. Caso esteja, siga as instruções para desativá-lo:
-<center><img title="Instalação" width="640" src="Pictures/bitlocker/bitlocker.png"></center>
+<center>![](bitlocker/bitlocker.png)</center>
 <br>
 
 	•	Clique em Desativar BitLocker ao lado da unidade criptografada.
@@ -23,17 +23,17 @@ Na tela que aparecer, você poderá verificar se o BitLocker está ativado. Caso
 <br>
 Agora precisamos criar o pendrive de instalação do Ubuntu 22.04. Para este passo, você deve instalar o <strong>rufus</strong>. <br><br>
 
-Você já baixou este arquivo no mesmo momento em que baixou o arquivo <strong>iso</strong> no início da atividade:[Linux Basico](README.md)
+Você já baixou este arquivo no mesmo momento em que baixou o arquivo <strong>iso</strong> no início da atividade: [Arquivos](../../index.md#arquivos)
 
 Após executar o arquivo, você verá um pedido de autorização de execução do windows:
-<center><img title="Instalação" width="640" src="Pictures/rufus/inst_rufus01.png"></center>
+<center>![](rufus/inst_rufus01.png)</center>
 <br>
 Clique em <strong>SIM</strong> e abrirá uma janela perguntando se quer buscar por atualizações:
 <br><br>
-<center><img title="Instalação" width="640" src="Pictures/rufus/inst_rufus02.png"></center>
+<center>![](rufus/inst_rufus02.png)</center>
 <br>
 Clique em <strong>SIM</strong> novamente. Após verificar se existem atualizações, ele abrirá a tela principal do rufus:
-<center><img title="Instalação" width="640" src="Pictures/rufus/rufus.png"></center>
+<center>![](rufus/rufus.png)</center>
 <br>
 Nesta tela, você deve escolher as seguintes opções:<br>
 - Device: O Pendrive em que gravará a instalação do Ubuntu;<br>
@@ -70,5 +70,5 @@ Agora vamos iniciar o computador pelo pendrive. Para esta etapa, se for um noteb
 
 Após aparecer o menu, escolha o pendrive e tecle enter.
 
-Próximo passo: [Instalação do Ubuntu](Ubuntu.md)
+Próximo passo: [Instalação do Ubuntu](../03-ubuntu/Ubuntu.md)
 

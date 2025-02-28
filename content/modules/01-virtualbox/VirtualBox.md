@@ -4,13 +4,10 @@
 
 - Vamos dividir este tópico em dois. Clique no sistema operacional que você usa para acessar o conjunto de instruções correto:
 
-
-<p style="text-align:center;">
-  <a href="#instalação-no-windows">WINDOWS</a>
-</p>
-<p style="text-align:center;">
-  <a href="#instalação-no-macos">MACOS</a>
-</p>
+<center>
+[Windows](#windows)<br>
+[MacOS](#macos)
+</center>
 
 <div style="border: 1px solidrgb(19, 20, 20); border-left-width: 5px; padding: 10px; background-color:rgb(175, 178, 181); border-radius: 5px;">
 💡 <strong>Dica:</strong> Pergunte em TODAS dúvidas!!!
@@ -18,9 +15,9 @@
 
 ---
 
-- Se você já instalou o VirtualBox, pode seguir para a [Instalação do Linux](#preparando-a-instalação-do-linux-ubuntu-2204)
+- Se você já instalou o VirtualBox, pode seguir para a [Criação da Máquina Virtual](#ubuntuvm)
 ---
-
+[](){ #windows }
 ### Instalação no Windows
 - Neste exemplo estamos usando o Windos 11 24h2 e o instalador do link mostrado na primeira página.
 - Dê um duplo clique no arquivo que você baixou e siga a instalação.
@@ -35,13 +32,12 @@
 ![](Windows/inst06.png)
 ![](Windows/inst07.png)
 ![](Windows/inst08.png)
-
+<br>
+Agora você pode ir para a [Criação da Máquina Virtual](#ubuntuvm)
 </center>
 
-<p style="text-align:right;">
-  <a href="#preparando-a-instalação-do-linux-ubuntu-2204">Preparando a Instalação do Linux</a>
-</p>
 
+[](){ #macos }
 ### Instalação no MacOS
 - Neste exemplo estamos usando MacOS Ventura e o instalador do link mostrado na primeira página.
 - Após o download, execute o arquivo de extenção dmg. Ele montará um disco virtual com a instalação do VirtualBox.
@@ -58,8 +54,8 @@
 <br>
 
 </center>
-
-### Preparando a Instalação do Linux Ubuntu 22.04
+[](){ #ubuntuvm }
+### Cricar a Máquina Virtual do Linux Ubuntu 22.04
 
 - A partir deste ponto, tanto a instalação no Windows como no Linux os passos serão os mesmos. Estaremos usando as imagens da instalação no Windows por ser o SO mais utilizado, se você está usando MacOS e tiver dúvidas **PERGUNTE** a sua dúvida é muito importante para todos!!
 
@@ -77,25 +73,23 @@
 
 <center>![](vm/inst10.png)</center>
 
-<p style="text-align:center;">Clique em Próximo</p><br><br>
-
-
+<p style="text-align:center;">Clique em Próximo</p>
 <p style="text-align:center;">Agora escolha quanto do seu hardware ficará "dedicado" à máquina virtual.</p>
 <p style="text-align:center;">Usualmente ele recomenda o mínimo necessário para o sistema funcionar, é extremamente recomendável que dedique um pouco mais do hardware. Em situações do dia a dia é interessante, oa menos, metade dos seus núcleos e metade de sua memória RAM. Mas <strong>cuidado</strong> para não entrar na área em <strong>vermelho</strong>, se deixar pouco recurso para o sistema operacional da máuqina, você travará o seu computador assim que iniciar a máquina virtual.</p>
 
 <center>![](vm/inst11.png)</center>
 
-<p style="text-align:center;">Clique em Próximo</p><br><br>
+<p style="text-align:center;">Clique em Próximo</p>
 <center>![](vm/inst12.png)</center>
 
 <p style="text-align:center;">Chegou o momento de dizer o tamnho do seu disco virtual.</p>
 <p style="text-align:center;">Não recomendo deixar menos de 40G. Não há necessidade para <strong>pânico</strong> pois a alocação deste disco é dinâmica, você não ficará com todo o espaço "preso" neste aruivo. Para isso é só <strong> não clicar</strong> no checkbox.</p>
 
-<p style="text-align:center;">Clique em Próximo</p><br><br>
+<p style="text-align:center;">Clique em Próximo</p>
 <center>![](vm/inst13.png)</center>
 
 <p style="text-align:center;">Sumário</p>
-<p style="text-align:center;">Nesta tela você poderá revisar tudo o que escolheu e finalizar a configuração da sua máquina virtual, clicando em Finalizar.</p><br>
+<p style="text-align:center;">Nesta tela você poderá revisar tudo o que escolheu e finalizar a configuração da sua máquina virtual, clicando em <strong>Finalizar</strong>.</p><br>
 <p style="text-align:center;">Os próximos passos serão os mesmos para as máquinas virtuais e a instalação diretamente no computador.</p>
 
-Próximo passo: [Instalação do Ubuntu](modules/03-ubuntu/Ubuntu.md)
+Próximo passo: [Instalação do Ubuntu](../03-ubuntu/Ubuntu.md)
