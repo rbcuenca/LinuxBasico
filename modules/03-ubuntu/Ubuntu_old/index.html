@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+      
+        <title>Ubuntu old - Linux Basico</title>
+      
+    
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:700|Oxygen+Mono|Source+Sans+Pro:700|Source+Serif+Pro&amp;display=swap">
+    <link rel="stylesheet" href="../../../assets/css/main.css">
+    <script>
+      // SETUP GLOBAL CONSTANTS
+      var base_url = '../../..';
+      
+      var telemetryEnabled = false;
+      var backendUrl = "";
+      var courseSlug = "";
+      
+      
+      var dashboardEnabled = true;
+      var tagTree = [{'reference': ['choice-exercise', 'parsons-exercise', 'text-exercise']}, {'grandparent-tag': [{'parent-tag': ['child-tag']}]}];
+      
+
+      // SETUP PLUGIN
+      window.initialized = false;
+      if (!window.initializers) window.initializers = [];
+      window.registerInitializer = (initialize) => {
+        if (window.initialized) initialize();
+        else window.initializers.push(initialize);
+      };
+    </script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="https://unpkg.com/hyperscript.org"></script>
+    <script src="https://unpkg.com/htmx.org@1.8.4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script src="../../../assets/js/main.js"></script>
+    
+    <link rel="stylesheet" href="../../../css/termynal.css"><link rel="stylesheet" href="../../../termynal.css">
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  <body>
+    <div class="ah-main-container">
+      <header class="ah-header">
+        <button class="ah-menu-btn ah-button ah-button--borderless"
+                aria-label="toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+</svg>
+        </button>
+        <a href="../../.."
+           title="Linux Basico"
+           class="ah-logo"
+           aria-label="Linux Basico">
+          Linux Basico
+        </a>
+        <div class="ah-header--right">
+          
+          
+          
+          <button id="resetHandoutButton">
+            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+  <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+</svg></span>
+          </button>
+          
+
+          
+        </div>
+      </header>
+      <nav class="ah-navigation preload">
+        <div class="ah-nav-container">
+          <button class="ah-menu-btn ah-button ah-button--borderless close-menu"
+                  aria-label="close menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/>
+</svg>
+          </button>
+          <ul class="ah-nav-body">
+            
+              
+  
+    <li>
+      <a href="../../..">Home</a>
+    </li>
+  
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Dia 1</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../01-virtualbox/VirtualBox/">01 - VirtualBox</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../02-dualboot/Dualboot/">02 - Dual Boot</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Ubuntu/">03 - Instalando o Ubuntu</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../04-atualiza%C3%A7%C3%A3o/Atualizacao/">04 - Atualização do Sistema</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Dia 2</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../04-bla/bla.md">04 - bla</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+          </ul>
+        </div>
+      </nav>
+      <main class="ah-content ah-typeset">
+        
+          <div class="ah-title-box">
+            <ul class="ah-breadcrumbs">
+              
+                
+                <li></li>
+            </ul>
+            
+            
+          </div>
+          
+            <section class="progress-section show">
+<h1 id="instalacao-do-ubuntu">Instalação do Ubuntu</h1>
+<p>Agora, independente de se você está usando a máquina virtual ou se está instalando diretamente no seu computador, os procedimentos serão os mesmos.</p>
+<p>Ao iniciar a máquina virtual ou o seu computador, você encontrará a seguinte tela possibilitando o teste ou instalação do Linux Ubuntu. Nesta tela selecione "Try or Install Ubuntu" e pressione <strong>ENTER</strong></p>
+<p><center>
+<a class="glightbox" href="../inst/inst18.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst18.png" /></a>
+Após carregar a instalação, escolha: <strong>Instaall Ubuntu</strong>
+<a class="glightbox" href="../inst/inst19.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst19.png" /></a>
+Na próxima tela, vamos manter os idiomas English (US). É possível trocar com facilidade o idioma posteriormente.
+<a class="glightbox" href="../inst/inst20.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst20.png" /></a>
+Na próxima tela, vamos escolher <strong>Normal Instalaton</strong> para que a instalação proceda com todos os pacotes da instalação padráo.
+<a class="glightbox" href="../inst/inst20a.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst20a.png" /></a></p>
+<p>Nesta tela devemos escolher <strong>Something else</strong> para escolhermos os detalhes da instalação.</p>
+<div style="border: 1px solidrgb(19, 20, 20); border-left-width: 5px; padding: 10px; background-color:rgb(175, 178, 181); border-radius: 5px;">
+💡 <strong>Dica:</strong> - Se você escolher a primeira opção, apagará <strong>TODO</strong> o conteúdo do seu computador.
+</div>
+<p><br>
+<a class="glightbox" href="../inst/inst21.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst21.png" /></a>
+Vamos tratar com <strong>muita atenção</strong> esta estapa. Se você está instalando na sua <strong> Máquina Virtual</strong> ou em um <strong>SSD independente</strong> no seu computador, você precisa criar uma partição de 500MB, do tipo <strong>UEFI System Partigion</strong>, clicando duas vezes sobre o espaço vazio.
+<a class="glightbox" href="../inst/inst23.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst23.png" /></a>
+O mapa de partições ficará da seguinte forma:
+<a class="glightbox" href="../inst/inst24.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst24.png" /></a>
+Agora, tanto no caso anterior quanto se você está instalando como segundo sistema operacional no mesmo SSD do seu windows, você deve criar outra partição - que ocupará todo o espaço livre - do tipo <strong>btrfs journaling file system</strong>. Escolha também o ponto de montagem: <strong>Mount point: /</strong>.
+<a class="glightbox" href="../inst/inst22.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst22.png" /></a>
+Depois de criar ambas as partiçÕes, o mapa de partições ficará assim:
+<a class="glightbox" href="../inst/inst26.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst26.png" /></a>
+Ao clicar em <strong>Install Now</strong> aparecerá uma tela pedindo para confirmar as alterações no disco. Se tudo estiver correto, clique em <strong>Continuar</strong>.
+<a class="glightbox" href="../inst/inst27.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst27.png" /></a>
+A partir de agora, você escolherá o fuso horário (clicando próximo de sua região) e os demais dados da sua conta como nome do computador, nome do usuário e senha. Veja as próximas telas.
+<a class="glightbox" href="../inst/inst28.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst28.png" /></a>
+Agora, ao clicar em <strong>Continuar</strong> ele iniciará a instalação.
+<a class="glightbox" href="../inst/inst29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst29.png" /></a>
+<a class="glightbox" href="../inst/inst30.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst30.png" /></a>
+Ao terminar a instalação, Clique em <strong>Restart Now</strong>. Ele iniciará o reinício e interromperá na sequência pedindo para que você retire o pendrive de instalação e pressione enter.
+<a class="glightbox" href="../inst/inst31.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst31.png" /></a>
+Se você estiver instalando no PC, basta retirar Enter. Se estiver no Virtual Box, apenas pressione Enter.
+<a class="glightbox" href="../inst/inst32.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst32.png" /></a>
+Se você estiver no VirtualBox, clique em configurações, Armazenamento e Retire a imagem (arquivo iso) do drive virtual de CD. Clique em <strong>OK</strong> e feche as configurações. Pressione Enter.
+<a class="glightbox" href="../inst/inst33.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst33.png" /></a>
+Pronto, sua instalação foi concluída! Agora ao reiniciar, você verá a tela do Grub (gerenciador de inicialização do linux). Se você não fizer nada por 30s ele iniciará o Ubuntu, você também pode escolher com as setas e pressionar Enter.
+<a class="glightbox" href="../inst/inst34.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst34.png" /></a>
+Em todas as inicializações, ele fará uma breve checagem no sistema de arquivos. É aconselhavel que não cancele. Leva poucos segundos.
+<a class="glightbox" href="../inst/inst35.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst35.png" /></a>
+Agora basta escolher o seu usuário e colocar a sua senha.
+<a class="glightbox" href="../inst/inst36.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst36.png" /></a>
+<a class="glightbox" href="../inst/inst37.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst37.png" /></a>
+Na primeira inicialização ele perguntará quais contas você quer manter conectada com seu sistema. Sinta-se a vontade para fazer em outro momento. Clique em <strong>Next</strong>.
+<a class="glightbox" href="../inst/inst38.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst38.png" /></a>
+Recomendo fortemente que se inscreva, posteriormente, no Ubuntu Pro que trás algumas atualizações de segurança a mais, dentre outros pacotes.
+<a class="glightbox" href="../inst/inst39.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst39.png" /></a>
+Você já está no ambiente totalmente configurado para uso. Se estiver utilizando a máquina virtual, você já tem a conexão internet configurada. Se não tiver, basta clicar na parte superior direita e conectar.
+<a class="glightbox" href="../inst/inst40.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst40.png" /></a></p>
+<p></center></p>
+
+
+</section>
+          
+        
+      </main>
+      <footer class="ah-footer ah-typeset">
+        <div class="ah-footer-nav">
+          
+          
+        </div>
+      </footer>
+    </div>
+    
+      <script src="../../../js/tabs.js"></script><script src="../../../js/termynal.js"></script><script src="../../../js/custom.js"></script><script src="../../../termynal.js"></script>
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body>
+</html>

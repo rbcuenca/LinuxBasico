@@ -140,6 +140,14 @@
   
 
       
+        
+  
+    <li>
+      <a href="../../04-atualiza%C3%A7%C3%A3o/Atualizacao/">04 - Atualização do Sistema</a>
+    </li>
+  
+
+      
     </ul>
   </li>
 
@@ -181,7 +189,59 @@
           </div>
           
             <section class="progress-section show">
-<h1 id="instalacao-do-ubuntu">Instalação do Ubuntu</h1>
+<h1 id="instalao-do-ubuntu">Instalao do Ubuntu</h1>
+<p>Agora, independente de se você está usando a máquina virtual ou se está instalando diretamente no seu computador, os procedimentos serão os mesmos.</p>
+<p>Ao iniciar a máquina virtual ou o seu computador, você encontrará a seguinte tela possibilitando o teste ou instalação do Linux Ubuntu. Nesta tela selecione "Try or Install Ubuntu" e pressione <strong>ENTER</strong></p>
+<p><center>
+<a class="glightbox" href="../inst/inst18.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst18.png" /></a>
+Após carregar a instalaçã
+o, escolha: <strong>Instaall Ubuntu</strong>
+<a class="glightbox" href="../inst/inst19.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst19.png" /></a>
+Na próxima tela, vamos manter os idiomas English (US). é possível trocar com facilidade o idioma posteriormente.
+<a class="glightbox" href="../inst/inst20.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst20.png" /></a>
+Na próxima tela, vamos escolher <strong>Normal Instalaton</strong> para que a instalação proceda com todos os pacotes da instalação padrão.
+<a class="glightbox" href="../inst/inst20a.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst20a.png" /></a></p>
+<p>Nesta tela devemos escolher <strong>Something else</strong> para escolhermos os detalhes da instalação.</p>
+<div style="border: 1px solidrgb(19, 20, 20); border-left-width: 5px; padding: 10px; background-color:rgb(175, 178, 181); border-radius: 5px;">
+💡 <strong>Dica:</strong> - Se você escolher a primeira opção, apagará <strong>TODO</strong> o conteúdo do seu computador.
+</div>
+<p><br>
+<a class="glightbox" href="../inst/inst21.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst21.png" /></a>
+Vamos tratar com <strong>muita atenção</strong> esta estapa. Se você está instalando na sua <strong> Máquina Virtual</strong> ou em um <strong>SSD independente</strong> no seu computador, você precisa criar uma partição de 500MB, do tipo <strong>UEFI System Partigion</strong>, clicando duas vezes sobre o espaço vazio.
+<a class="glightbox" href="../inst/inst23.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst23.png" /></a>
+O mapa de partições ficará da seguinte forma:
+<a class="glightbox" href="../inst/inst24.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst24.png" /></a>
+Agora, tanto no caso anterior quanto se você está instalando como segundo sistema operacional no mesmo SSD do seu windows, você deve criar outra partição - que ocupará todo o espaço livre - do tipo <strong>btrfs journaling file system</strong>. Escolha também o ponto de montagem: <strong>Mount point: /</strong>.
+<a class="glightbox" href="../inst/inst22.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst22.png" /></a>
+Depois de criar ambas as partiçõeses, o mapa de partições ficará assim:
+<a class="glightbox" href="../inst/inst26.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst26.png" /></a>
+Ao clicar em <strong>Install Now</strong> aparecerá uma tela pedindo para confirmar as alterações no disco. Se tudo estiver correto, clique em <strong>Continuar</strong>.
+<a class="glightbox" href="../inst/inst27.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst27.png" /></a>
+A partir de agora, você escolherá o fuso horário (clicando próximo de sua região) e os demais dados da sua conta como nome do computador, nome do usuário e senha. Veja as próximas telas.
+<a class="glightbox" href="../inst/inst28.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst28.png" /></a>
+Agora, ao clicar em <strong>Continuar</strong> ele iniciará a instalação.
+<a class="glightbox" href="../inst/inst29.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst29.png" /></a>
+<a class="glightbox" href="../inst/inst30.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst30.png" /></a>
+Ao terminar a instalação, Clique em <strong>Restart Now</strong>. Ele iniciará o reiní­cio e interromperá na sequência pedindo para que você retire o pendrive de instalação e pressione enter.
+<a class="glightbox" href="../inst/inst31.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst31.png" /></a>
+Se você estiver instalando no PC, basta retirar Enter. Se estiver no Virtual Box, apenas pressione Enter.
+<a class="glightbox" href="../inst/inst32.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst32.png" /></a>
+Se você estiver no VirtualBox, clique em configurações, Armazenamento e Retire a imagem (arquivo iso) do drive virtual de CD. Clique em <strong>OK</strong> e feche as configurações. Pressione Enter.
+<a class="glightbox" href="../inst/inst33.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst33.png" /></a>
+Pronto, sua instalação foi concluí­da! Agora ao reiniciar, você verá a tela do Grub (gerenciador de inicialização do linux). Se você não fizer nada por 30s ele iniciará o Ubuntu, você também pode escolher com as setas e pressionar Enter.
+<a class="glightbox" href="../inst/inst34.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst34.png" /></a>
+Em todas as inicializações, ele fará uma breve checagem no sistema de arquivos. É aconselhavel que não cancele. Leva poucos segundos.
+<a class="glightbox" href="../inst/inst35.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst35.png" /></a>
+Agora basta escolher o seu usuário e colocar a sua senha.
+<a class="glightbox" href="../inst/inst36.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst36.png" /></a>
+<a class="glightbox" href="../inst/inst37.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst37.png" /></a>
+Na primeira inicialização ele perguntará quais contas você quer manter conectada com seu sistema. Sinta-se a vontade para fazer em outro momento. Clique em <strong>Next</strong>.
+<a class="glightbox" href="../inst/inst38.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst38.png" /></a>
+Recomendo fortemente que se inscreva, posteriormente, no Ubuntu Pro que trás algumas atualizações de segurança a mais, dentre outros pacotes.
+<a class="glightbox" href="../inst/inst39.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst39.png" /></a>
+Você já estão no ambiente totalmente configurado para uso. Se estiver utilizando a máquina virtual, você já tem a conexão internet configurada. Se não estiver, basta clicar na parte superior direita e conectar.
+<a class="glightbox" href="../inst/inst40.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../inst/inst40.png" /></a></p>
+<p></center></p>
 
 
 </section>
@@ -198,6 +258,13 @@
               <span class="nav-title">02 - Dual Boot</span>
             </a>
           
+          
+            <a href="../../04-atualiza%C3%A7%C3%A3o/Atualizacao/"
+               class="ah-next"
+               title="04 - Atualização do Sistema">
+              <span class="nav-label">Próximo</span>
+              <span class="nav-title">04 - Atualização do Sistema</span>
+            </a>
           
         </div>
       </footer>

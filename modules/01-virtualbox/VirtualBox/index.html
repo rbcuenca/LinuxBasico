@@ -123,7 +123,7 @@
               </li>
             
               <li class="ah-toc-item">
-                <a href="#-se-voce-ja-instalou-o-virtualbox-pode-seguir-para-a-instalacao-do-linux">- Se você já instalou o VirtualBox, pode seguir para a Instalação do Linux</a>
+                <a href="#-se-voce-ja-instalou-o-virtualbox-pode-seguir-para-a-criacao-da-maquina-virtual">- Se você já instalou o VirtualBox, pode seguir para a Criação da Máquina Virtual</a>
               </li>
             
         
@@ -144,6 +144,14 @@
   
     <li>
       <a href="../../03-ubuntu/Ubuntu/">03 - Instalando o Ubuntu</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../04-atualiza%C3%A7%C3%A3o/Atualizacao/">04 - Atualização do Sistema</a>
     </li>
   
 
@@ -194,19 +202,17 @@
 <ul>
 <li>Vamos dividir este tópico em dois. Clique no sistema operacional que você usa para acessar o conjunto de instruções correto:</li>
 </ul>
-<p style="text-align:center;">
-  <a href="#instalação-no-windows">WINDOWS</a>
-</p>
-<p style="text-align:center;">
-  <a href="#instalação-no-macos">MACOS</a>
-</p>
-
+<p><center>
+<a href="#windows">Windows</a><br>
+<a href="#macos">MacOS</a>
+</center></p>
 <div style="border: 1px solidrgb(19, 20, 20); border-left-width: 5px; padding: 10px; background-color:rgb(175, 178, 181); border-radius: 5px;">
 💡 <strong>Dica:</strong> Pergunte em TODAS dúvidas!!!
 </div>
 
 <hr />
-<h2 id="-se-voce-ja-instalou-o-virtualbox-pode-seguir-para-a-instalacao-do-linux">- Se você já instalou o VirtualBox, pode seguir para a <a href="#preparando-a-instalação-do-linux-ubuntu-2204">Instalação do Linux</a></h2>
+<h2 id="-se-voce-ja-instalou-o-virtualbox-pode-seguir-para-a-criacao-da-maquina-virtual">- Se você já instalou o VirtualBox, pode seguir para a <a href="#ubuntuvm">Criação da Máquina Virtual</a></h2>
+<p><a href="" id="windows"></a></p>
 <h3 id="instalacao-no-windows">Instalação no Windows</h3>
 <ul>
 <li>Neste exemplo estamos usando o Windos 11 24h2 e o instalador do link mostrado na primeira página.</li>
@@ -221,12 +227,11 @@
 <a class="glightbox" href="../Windows/inst05.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../Windows/inst05.png" /></a>
 <a class="glightbox" href="../Windows/inst06.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../Windows/inst06.png" /></a>
 <a class="glightbox" href="../Windows/inst07.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../Windows/inst07.png" /></a>
-<a class="glightbox" href="../Windows/inst08.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../Windows/inst08.png" /></a></p>
-<p></center></p>
-<p style="text-align:right;">
-  <a href="#preparando-a-instalação-do-linux-ubuntu-2204">Preparando a Instalação do Linux</a>
-</p>
-
+<a class="glightbox" href="../Windows/inst08.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../Windows/inst08.png" /></a>
+<br>
+Agora você pode ir para a <a href="#ubuntuvm">Criação da Máquina Virtual</a>
+</center></p>
+<p><a href="" id="macos"></a></p>
 <h3 id="instalacao-no-macos">Instalação no MacOS</h3>
 <ul>
 <li>Neste exemplo estamos usando MacOS Ventura e o instalador do link mostrado na primeira página.</li>
@@ -241,8 +246,9 @@
 <p style="text-align:center;">Nos últimos momentos da instalação, aparecerá este aviso no canto superior direito, basta fechar.</p>
 <p><a class="glightbox" href="../MacOS/instMac05.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../MacOS/instMac05.png" /></a>
 <br></p>
-<p></center></p>
-<h3 id="preparando-a-instalacao-do-linux-ubuntu-2204">Preparando a Instalação do Linux Ubuntu 22.04</h3>
+<p></center>
+<a href="" id="ubuntuvm"></a></p>
+<h3 id="cricar-a-maquina-virtual-do-linux-ubuntu-2204">Cricar a Máquina Virtual do Linux Ubuntu 22.04</h3>
 <ul>
 <li>A partir deste ponto, tanto a instalação no Windows como no Linux os passos serão os mesmos. Estaremos usando as imagens da instalação no Windows por ser o SO mais utilizado, se você está usando MacOS e tiver dúvidas <strong>PERGUNTE</strong> a sua dúvida é muito importante para todos!!</li>
 </ul>
@@ -258,26 +264,25 @@
 
 <p><center><a class="glightbox" href="../vm/inst10.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../vm/inst10.png" /></a></center></p>
 <p style="text-align:center;">Clique em Próximo</p>
-<p><br><br></p>
 <p style="text-align:center;">Agora escolha quanto do seu hardware ficará "dedicado" à máquina virtual.</p>
 <p style="text-align:center;">Usualmente ele recomenda o mínimo necessário para o sistema funcionar, é extremamente recomendável que dedique um pouco mais do hardware. Em situações do dia a dia é interessante, oa menos, metade dos seus núcleos e metade de sua memória RAM. Mas <strong>cuidado</strong> para não entrar na área em <strong>vermelho</strong>, se deixar pouco recurso para o sistema operacional da máuqina, você travará o seu computador assim que iniciar a máquina virtual.</p>
 
 <p><center><a class="glightbox" href="../vm/inst11.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../vm/inst11.png" /></a></center></p>
 <p style="text-align:center;">Clique em Próximo</p>
-<p><br><br>
-<center><a class="glightbox" href="../vm/inst12.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../vm/inst12.png" /></a></center></p>
+<p><center><a class="glightbox" href="../vm/inst12.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../vm/inst12.png" /></a></center></p>
 <p style="text-align:center;">Chegou o momento de dizer o tamnho do seu disco virtual.</p>
 <p style="text-align:center;">Não recomendo deixar menos de 40G. Não há necessidade para <strong>pânico</strong> pois a alocação deste disco é dinâmica, você não ficará com todo o espaço "preso" neste aruivo. Para isso é só <strong> não clicar</strong> no checkbox.</p>
 
 <p style="text-align:center;">Clique em Próximo</p>
-<p><br><br>
-<center><a class="glightbox" href="../vm/inst13.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../vm/inst13.png" /></a></center></p>
+<p><center><a class="glightbox" href="../vm/inst13.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../vm/inst13.png" /></a></center></p>
 <p style="text-align:center;">Sumário</p>
-<p style="text-align:center;">Nesta tela você poderá revisar tudo o que escolheu e finalizar a configuração da sua máquina virtual, clicando em Finalizar.</p>
+<p style="text-align:center;">Nesta tela você poderá revisar tudo o que escolheu e finalizar a configuração da sua máquina virtual, clicando em <strong>Finalizar</strong>.</p>
 <p><br></p>
+<p style="text-align:center;">Retornando na tela inicial, clique em <strong>Iniciar</strong></p>
+<p><a class="glightbox" href="../vm/inst14.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../vm/inst14.png" /></a></p>
 <p style="text-align:center;">Os próximos passos serão os mesmos para as máquinas virtuais e a instalação diretamente no computador.</p>
 
-<p>Próximo passo: <a href="modules/03-ubuntu/Ubuntu.md">Instalação do Ubuntu</a></p>
+<p>Próximo passo: <a href="../../03-ubuntu/Ubuntu/">Instalação do Ubuntu</a></p>
 
 
 </section>
