@@ -1,20 +1,49 @@
-[Retornar](index.md)
 # Fazer o Dual Boot
 
 
-Ao escolher esta opção é __fortemente recomendável__ que tenha feito uma cópia de segurança de tudo o que você não pode perder. Há uma possiblidade grande de perder dados.
+Ao escolher a opção de fazer dual boot, é **fortemente recomendável** que você faça uma cópia de segurança de todos os seus dados importantes. Existe uma possibilidade significativa de perda de dados durante o processo de instalação e configuração do dual boot[1][2].
+
+Alguns pontos importantes a considerar:
+
+1. Backup completo: Faça uma cópia de segurança de todos os arquivos, documentos, fotos e outros dados que você não pode se dar ao luxo de perder.
+
+2. Risco envolvido: O processo de particionamento do disco e instalação de um novo sistema operacional ao lado do existente pode resultar em perda de dados se não for feito corretamente.
+
+3. Precaução: Esta recomendação enfatiza a importância de se preparar adequadamente antes de prosseguir com a instalação do dual boot.
+
+4. Dados críticos: Preste atenção especial aos dados que são insubstituíveis ou difíceis de recuperar.
+
+Lembre-se de que, embora o dual boot ofereça a vantagem de ter dois sistemas operacionais em um único computador, é crucial abordar o processo com cautela e preparação adequada para minimizar os riscos de perda de dados.
+
+Antes de iniciar a instalação do Linux em dual boot, é importante verificar e desativar a criptografia de disco no Windows, caso esteja ativada. Isso é necessário para posteriormente desligar o Secure Boot na BIOS. Siga estes passos para verificar e desativar a criptografia de disco BitLocker no Windows:
+
+1. Clique no botão Iniciar
+2. Acesse o Painel de Controle
+3. Vá até Sistema e Segurança
+4. Clique em Criptografia de Unidade de Disco BitLocker
+
+Na tela que aparecer, você poderá verificar se o BitLocker está ativado. Caso esteja, siga estas instruções para desativá-lo:
+
+
+
+Para desativar o BitLocker:
+
+1. Clique em "Desativar BitLocker" ao lado da unidade criptografada
+2. Confirme a ação quando solicitado
+3. O processo de descriptografia será iniciado, o que pode levar algum tempo dependendo do tamanho da unidade
+4. Você pode continuar usando o computador durante o processo de descriptografia
+5. Após a conclusão, o BitLocker estará desativado para aquela unidade
+
+É importante desativar o BitLocker antes de prosseguir com a instalação do Linux em dual boot, pois a criptografia pode causar problemas de compatibilidade. Após desativar o BitLocker, você poderá prosseguir com a desativação do Secure Boot na BIOS e a instalação do Linux.
 
 <div style="border: 1px solidrgb(19, 20, 20); border-left-width: 5px; padding: 10px; background-color:rgb(175, 178, 181); border-radius: 5px;">
-💡 <strong>Dica:</strong> Você tem o OneDrive pela sua conta Microsoft do INSPER (e-mail do aluno).<br><br>Se você usa Windows, a intergração com o OneDrive fuciona muito bem e mantém, automaticamente, uma cópia on-line dos seus arquivos e de suas configurações básicas (dependendo de como configurou).<br><br>Se você usa MacOS (A partir do Yosemite - 10.10 - 2014) a integração com o iCloud Drive funciona muito bem e mantém, automaticamente, uma cópia on-line
+💡 <strong>Dica:</strong> - Você tem o OneDrive pela sua conta Microsoft do INSPER (e-mail do aluno).
 </div>
-<br><br>
-Antes de iniciar a instalação do Linux em dual boot, é necessário verificar se a criptografia de disco está ativada. Caso esteja, será preciso desativá-la para posteriormente desligar o Secure Boot na BIOS. Siga os passos abaixo para verificar e desativar a criptografia de disco no Windows:
 
-	1.      Clique no botão Iniciar,
-    2.	Acesse o Painel de Controle.
-	3.	Vá até Sistema e Segurança.
-	4.	Clique em Criptografia de Unidade de Disco BitLocker.
-Na tela que aparecer, você poderá verificar se o BitLocker está ativado. Caso esteja, siga as instruções para desativá-lo:
+> Se você usa Windows, a integração com o OneDrive funciona muito bem e mantém, automaticamente, uma cópia online dos seus arquivos e de suas configurações básicas (dependendo de como configurou).
+
+> Se você usa MacOS (A partir do Yosemite - 10.10 - 2014) a integração com o iCloud Drive funciona muito bem e mantém, automaticamente, uma cópia online.
+
 <center>![](bitlocker/bitlocker.png)</center>
 <br>
 
@@ -71,4 +100,5 @@ Agora vamos iniciar o computador pelo pendrive. Para esta etapa, se for um noteb
 Após aparecer o menu, escolha o pendrive e tecle enter.
 
 Próximo passo: [Instalação do Ubuntu](../03-ubuntu/Ubuntu.md)
+
 

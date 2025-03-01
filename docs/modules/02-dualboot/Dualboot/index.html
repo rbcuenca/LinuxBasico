@@ -140,6 +140,14 @@
   
 
       
+        
+  
+    <li>
+      <a href="../../04-atualiza%C3%A7%C3%A3o/Atualizacao/">04 - Atualização do Sistema</a>
+    </li>
+  
+
+      
     </ul>
   </li>
 
@@ -181,37 +189,66 @@
           </div>
           
             <section class="progress-section show">
-<p><a href="README.md">Retornar</a></p>
 <h1 id="fazer-o-dual-boot">Fazer o Dual Boot</h1>
-<p>Ao escolher esta opção é <strong>fortemente recomendável</strong> que tenha feito uma cópia de segurança de tudo o que você não pode perder. Há uma possiblidade grande de perder dados.</p>
+<p>Ao escolher a opção de fazer dual boot, é <strong>fortemente recomendável</strong> que você faça uma cópia de segurança de todos os seus dados importantes. Existe uma possibilidade significativa de perda de dados durante o processo de instalação e configuração do dual boot[1][2].</p>
+<p>Alguns pontos importantes a considerar:</p>
+<ol>
+<li>
+<p>Backup completo: Faça uma cópia de segurança de todos os arquivos, documentos, fotos e outros dados que você não pode se dar ao luxo de perder.</p>
+</li>
+<li>
+<p>Risco envolvido: O processo de particionamento do disco e instalação de um novo sistema operacional ao lado do existente pode resultar em perda de dados se não for feito corretamente.</p>
+</li>
+<li>
+<p>Precaução: Esta recomendação enfatiza a importância de se preparar adequadamente antes de prosseguir com a instalação do dual boot.</p>
+</li>
+<li>
+<p>Dados críticos: Preste atenção especial aos dados que são insubstituíveis ou difíceis de recuperar.</p>
+</li>
+</ol>
+<p>Lembre-se de que, embora o dual boot ofereça a vantagem de ter dois sistemas operacionais em um único computador, é crucial abordar o processo com cautela e preparação adequada para minimizar os riscos de perda de dados.</p>
+<p>Antes de iniciar a instalação do Linux em dual boot, é importante verificar e desativar a criptografia de disco no Windows, caso esteja ativada. Isso é necessário para posteriormente desligar o Secure Boot na BIOS. Siga estes passos para verificar e desativar a criptografia de disco BitLocker no Windows:</p>
+<ol>
+<li>Clique no botão Iniciar</li>
+<li>Acesse o Painel de Controle</li>
+<li>Vá até Sistema e Segurança</li>
+<li>Clique em Criptografia de Unidade de Disco BitLocker</li>
+</ol>
+<p>Na tela que aparecer, você poderá verificar se o BitLocker está ativado. Caso esteja, siga estas instruções para desativá-lo:</p>
+<p>Para desativar o BitLocker:</p>
+<ol>
+<li>Clique em "Desativar BitLocker" ao lado da unidade criptografada</li>
+<li>Confirme a ação quando solicitado</li>
+<li>O processo de descriptografia será iniciado, o que pode levar algum tempo dependendo do tamanho da unidade</li>
+<li>Você pode continuar usando o computador durante o processo de descriptografia</li>
+<li>Após a conclusão, o BitLocker estará desativado para aquela unidade</li>
+</ol>
+<p>É importante desativar o BitLocker antes de prosseguir com a instalação do Linux em dual boot, pois a criptografia pode causar problemas de compatibilidade. Após desativar o BitLocker, você poderá prosseguir com a desativação do Secure Boot na BIOS e a instalação do Linux.</p>
 <div style="border: 1px solidrgb(19, 20, 20); border-left-width: 5px; padding: 10px; background-color:rgb(175, 178, 181); border-radius: 5px;">
-💡 <strong>Dica:</strong> Você tem o OneDrive pela sua conta Microsoft do INSPER (e-mail do aluno).<br><br>Se você usa Windows, a intergração com o OneDrive fuciona muito bem e mantém, automaticamente, uma cópia on-line dos seus arquivos e de suas configurações básicas (dependendo de como configurou).<br><br>Se você usa MacOS (A partir do Yosemite - 10.10 - 2014) a integração com o iCloud Drive funciona muito bem e mantém, automaticamente, uma cópia on-line
+💡 <strong>Dica:</strong> - Você tem o OneDrive pela sua conta Microsoft do INSPER (e-mail do aluno).
 </div>
-<p><br><br>
-Antes de iniciar a instalação do Linux em dual boot, é necessário verificar se a criptografia de disco está ativada. Caso esteja, será preciso desativá-la para posteriormente desligar o Secure Boot na BIOS. Siga os passos abaixo para verificar e desativar a criptografia de disco no Windows:</p>
-<div class="language-text highlight"><pre><span></span><code>1.      Clique no botão Iniciar,
-2.  Acesse o Painel de Controle.
-3.  Vá até Sistema e Segurança.
-4.  Clique em Criptografia de Unidade de Disco BitLocker.
-</code></pre></div>
-<p>Na tela que aparecer, você poderá verificar se o BitLocker está ativado. Caso esteja, siga as instruções para desativá-lo:
-<center><a class="glightbox" href="Pictures/bitlocker/bitlocker.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img title="Instalação" width="640" src="Pictures/bitlocker/bitlocker.png"></a></center>
+
+<blockquote>
+<p>Se você usa Windows, a integração com o OneDrive funciona muito bem e mantém, automaticamente, uma cópia online dos seus arquivos e de suas configurações básicas (dependendo de como configurou).</p>
+<p>Se você usa MacOS (A partir do Yosemite - 10.10 - 2014) a integração com o iCloud Drive funciona muito bem e mantém, automaticamente, uma cópia online.</p>
+</blockquote>
+<p><center><a class="glightbox" href="../bitlocker/bitlocker.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../bitlocker/bitlocker.png" /></a></center>
 <br></p>
 <div class="language-text highlight"><pre><span></span><code>•   Clique em Desativar BitLocker ao lado da unidade criptografada.
 •   Aguarde a descriptografia completa do disco antes de prosseguir.
 </code></pre></div>
 <p><br>
 Agora precisamos criar o pendrive de instalação do Ubuntu 22.04. Para este passo, você deve instalar o <strong>rufus</strong>. <br><br></p>
-<p>Você já baixou este arquivo no mesmo momento em que baixou o arquivo <strong>iso</strong> no início da atividade:<a href="README.md">Linux Basico</a></p>
+<p>Você já baixou este arquivo no mesmo momento em que baixou o arquivo <strong>iso</strong> no início da atividade: <a href="../../../#arquivos">Arquivos</a></p>
 <p>Após executar o arquivo, você verá um pedido de autorização de execução do windows:
-<center><a class="glightbox" href="Pictures/rufus/inst_rufus01.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img title="Instalação" width="640" src="Pictures/rufus/inst_rufus01.png"></a></center>
+<center><a class="glightbox" href="../rufus/inst_rufus01.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../rufus/inst_rufus01.png" /></a></center>
 <br>
 Clique em <strong>SIM</strong> e abrirá uma janela perguntando se quer buscar por atualizações:
 <br><br>
-<center><a class="glightbox" href="Pictures/rufus/inst_rufus02.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img title="Instalação" width="640" src="Pictures/rufus/inst_rufus02.png"></a></center>
+<center><a class="glightbox" href="../rufus/inst_rufus02.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../rufus/inst_rufus02.png" /></a></center>
 <br>
 Clique em <strong>SIM</strong> novamente. Após verificar se existem atualizações, ele abrirá a tela principal do rufus:
-<center><a class="glightbox" href="Pictures/rufus/rufus.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img title="Instalação" width="640" src="Pictures/rufus/rufus.png"></a></center>
+<center><a class="glightbox" href="../rufus/rufus.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../rufus/rufus.png" /></a></center>
 <br>
 Nesta tela, você deve escolher as seguintes opções:<br>
 - Device: O Pendrive em que gravará a instalação do Ubuntu;<br>
@@ -242,7 +279,7 @@ Após desativar a criptografia, reinicie o computador e acesse as configuraçõe
 
 <p>Agora vamos iniciar o computador pelo pendrive. Para esta etapa, se for um notebook da <strong>DELL</strong> pressione repetidamente a tecla <strong>F12</strong> após ligar o computador, assim acessará o menu de boot do computador. Se for um computador de outra marca, é necessário saber como entrar no menu, mas é provavel que seja com <strong>F8 ou F10</strong> e se for um computador <strong>Thinkpad</strong> você deve precionar <strong>ENTER</strong> durante a inicialização quando ele mandar.</p>
 <p>Após aparecer o menu, escolha o pendrive e tecle enter.</p>
-<p>Próximo passo: <a href="Ubuntu.md">Instalação do Ubuntu</a></p>
+<p>Próximo passo: <a href="../../03-ubuntu/Ubuntu/">Instalação do Ubuntu</a></p>
 
 
 </section>

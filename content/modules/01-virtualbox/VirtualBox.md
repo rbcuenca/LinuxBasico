@@ -90,6 +90,9 @@ Agora você pode ir para a [Criação da Máquina Virtual](#ubuntuvm)
 
 <p style="text-align:center;">Sumário</p>
 <p style="text-align:center;">Nesta tela você poderá revisar tudo o que escolheu e finalizar a configuração da sua máquina virtual, clicando em <strong>Finalizar</strong>.</p><br>
+
+<p style="text-align:center;">Retornando na tela inicial, clique em <strong>Iniciar</strong></p>
+![](vm/inst14.png)
 <p style="text-align:center;">Os próximos passos serão os mesmos para as máquinas virtuais e a instalação diretamente no computador.</p>
 
 Próximo passo: [Instalação do Ubuntu](../03-ubuntu/Ubuntu.md)

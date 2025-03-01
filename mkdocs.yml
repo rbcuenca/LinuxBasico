@@ -21,6 +21,7 @@ nav:
     - "01 - VirtualBox": modules/01-virtualbox/VirtualBox.md
     - '02 - Dual Boot': modules/02-dualboot/Dualboot.md
     - '03 - Instalando o Ubuntu': modules/03-ubuntu/Ubuntu.md
+    - '04 - Atualização do Sistema': modules/04-atualização/Atualizacao.md
   - "Dia 2":
     - "04 - bla": modules/04-bla/bla.md
     # - "03 - Batch prediction":
